@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
 
   s.name         = "HUDDemo"
   s.version      = "0.0.1"
-  s.summary      = "hud 加载器，添加到window或指定view"
+  s.summary      = "hud 加载器"
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
@@ -25,6 +25,7 @@ Pod::Spec.new do |s|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   s.description  = <<-DESC
+                  hud 加载器，添加到window或指定view
                    DESC
 
   s.homepage     = "https://github.com/comyn/HUDDemo"
@@ -38,8 +39,8 @@ Pod::Spec.new do |s|
   #  Popular ones are 'MIT', 'BSD' and 'Apache License, Version 2.0'.
   #
 
-  s.license      = { :type => 'MIT', "file =>'LICENSE'}
-  # s.license      = { :type => "MIT", :file => "FILE_LICENSE" }
+  s.license      = { :type => "MIT", :file => "LICENSE" }
+  # s.license      = { :type => "MIT", :file => "LICENSE" }
 
 
   # ――― Author Metadata  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -64,7 +65,7 @@ Pod::Spec.new do |s|
   #
 
   # s.platform     = :ios
-  # s.platform     = :ios, "5.0"
+  s.platform     = :ios, "8.0"
 
   #  When using multiple platforms
   s.ios.deployment_target = "8.0"
@@ -93,7 +94,7 @@ Pod::Spec.new do |s|
   s.source_files  = "HUDDemo/HUD/*.{h,m}"
   s.exclude_files = "HUDDemo/Exclude"
 
-  # s.public_header_files = "HUDDemo/HUD/*.h"
+  s.public_header_files = "HUDDemo/HUD/*.h"
 
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
