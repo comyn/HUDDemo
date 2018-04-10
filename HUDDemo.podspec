@@ -90,7 +90,7 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "HUDDemo", "HUDDemo/HUD/*.{h,m}"
+  s.source_files  = "HUDDemo/HUD/*.{h,m}"
   s.exclude_files = "HUDDemo/Exclude"
 
   # s.public_header_files = "HUDDemo/HUD/*.h"
