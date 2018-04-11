@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-@interface HUD : NSObject
+@interface WNHUD : NSObject
 
 + (instancetype)shareInstance;
 

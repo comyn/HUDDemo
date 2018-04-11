@@ -6,7 +6,7 @@
 //  Copyright © 2018年 comyn. All rights reserved.
 //
 
-#import "HUD.h"
+#import "WNHUD.h"
 #import "MBProgressHUD.h"
 
 typedef enum : NSUInteger {
@@ -17,7 +17,7 @@ typedef enum : NSUInteger {
     HUDModeFailure,
 } HUDMode;
 
-@interface HUD ()
+@interface WNHUD ()
 @property (nonatomic) NSInteger HUDAnimation;
 @property (nonatomic) NSInteger HUDBackgroundStyle;
 @property (nonatomic, copy) NSString *title;
@@ -27,10 +27,10 @@ typedef enum : NSUInteger {
 @property (nonatomic, strong) MBProgressHUD *hud;
 @end
 
-@implementation HUD
+@implementation WNHUD
 
 + (instancetype)shareInstance {
-    static HUD *instance = nil;
+    static WNHUD *instance = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         instance = [[self alloc] init];
@@ -56,62 +56,62 @@ typedef enum : NSUInteger {
 #pragma mark -- 添加到window上
 
 + (void)showLoading {
-    [HUD showLoading:nil];
+    [WNHUD showLoading:nil];
 }
 
 + (void)showLoading:(NSString *)string {
-    [HUD showLoading:string inView:nil];
+    [WNHUD showLoading:string inView:nil];
 }
 
 + (void)showInfoMsg:(NSString *)string {
-    [HUD showInfoMsg:string inView:nil];
+    [WNHUD showInfoMsg:string inView:nil];
 }
 
 + (void)showInfoMsg:(NSString *)string withSubTitle:(NSString *)subTitle {
-    [HUD showInfoMsg:string withSubTitle:subTitle inView:nil];
+    [WNHUD showInfoMsg:string withSubTitle:subTitle inView:nil];
 }
 
 + (void)showMessage:(NSString *)string {
-    [HUD showMessage:string inView:nil];
+    [WNHUD showMessage:string inView:nil];
 }
 
 + (void)showMessage:(NSString *)string withSubTitle:(NSString *)subTitle {
-    [HUD showMessage:string withSubTitle:subTitle inView:nil];
+    [WNHUD showMessage:string withSubTitle:subTitle inView:nil];
 }
 
 + (void)showSuccess:(NSString *)string {
-    [HUD showSuccess:string inView:nil];
+    [WNHUD showSuccess:string inView:nil];
 }
 
 + (void)showFailure:(NSString *)string {
-    [HUD showFailure:string inView:nil];
+    [WNHUD showFailure:string inView:nil];
 }
 
 #pragma mark - 添加到指定视图上
 
 + (void)showLoadingInView:(UIView *)view {
-    [HUD showLoading:nil inView:view];
+    [WNHUD showLoading:nil inView:view];
 }
 + (void)showLoading:(NSString *)string inView:(UIView *)view {
-    [[HUD shareInstance] showHUDMode:HUDModeLoading withTitle:string subTitle:nil inView:view];
+    [[WNHUD shareInstance] showHUDMode:HUDModeLoading withTitle:string subTitle:nil inView:view];
 }
 + (void)showInfoMsg:(NSString *)string inView:(UIView *)view {
-    [[HUD shareInstance] showHUDMode:HUDModeInfoMsg withTitle:string subTitle:nil inView:nil];
+    [[WNHUD shareInstance] showHUDMode:HUDModeInfoMsg withTitle:string subTitle:nil inView:nil];
 }
 + (void)showInfoMsg:(NSString *)string withSubTitle:(NSString *)subTitle inView:(UIView *)view {
-    [[HUD shareInstance] showHUDMode:HUDModeInfoMsg withTitle:string subTitle:subTitle inView:view];
+    [[WNHUD shareInstance] showHUDMode:HUDModeInfoMsg withTitle:string subTitle:subTitle inView:view];
 }
 + (void)showMessage:(NSString *)string inView:(UIView *)view {
-    [[HUD shareInstance] showHUDMode:HUDModeMessage withTitle:string subTitle:nil inView:view];
+    [[WNHUD shareInstance] showHUDMode:HUDModeMessage withTitle:string subTitle:nil inView:view];
 }
 + (void)showMessage:(NSString *)string withSubTitle:(NSString *)subTitle inView:(UIView *)view {
-    [[HUD shareInstance] showHUDMode:HUDModeMessage withTitle:string subTitle:subTitle inView:view];
+    [[WNHUD shareInstance] showHUDMode:HUDModeMessage withTitle:string subTitle:subTitle inView:view];
 }
 + (void)showSuccess:(NSString *)string inView:(UIView *)view {
-    [[HUD shareInstance] showHUDMode:HUDModeSuccess withTitle:string subTitle:nil inView:view];
+    [[WNHUD shareInstance] showHUDMode:HUDModeSuccess withTitle:string subTitle:nil inView:view];
 }
 + (void)showFailure:(NSString *)string inView:(UIView *)view {
-    [[HUD shareInstance] showHUDMode:HUDModeFailure withTitle:string subTitle:nil inView:nil];
+    [[WNHUD shareInstance] showHUDMode:HUDModeFailure withTitle:string subTitle:nil inView:nil];
 }
 
 #pragma mark - hud显示方式
@@ -178,11 +178,11 @@ typedef enum : NSUInteger {
 }
 
 + (void)hide {
-    [HUD hideAfterDelay:1.5f completion:nil];
+    [WNHUD hideAfterDelay:1.5f completion:nil];
 }
 
 + (void)hideAfterDelay:(NSTimeInterval)delay completion:(void(^)(void))completion {
-    [[HUD shareInstance] hideAfterDelay:delay completion:completion];
+    [[WNHUD shareInstance] hideAfterDelay:delay completion:completion];
 }
 
 - (void)hideAfterDelay:(NSTimeInterval)delay completion:(void(^)(void))completion {

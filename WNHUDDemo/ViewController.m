@@ -21,7 +21,6 @@
         [WNHUD showLoading];
         [WNHUD hideAfterDelay:5 completion:^{
             [WNHUD showSuccess:@"成功"];
-
         }];
     });
 }
