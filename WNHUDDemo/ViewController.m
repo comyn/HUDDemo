@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "HUD.h"
+#import "WNHUD.h"
 
 @interface ViewController ()
 
@@ -18,9 +18,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [HUD showLoading];
-        [HUD hideAfterDelay:5 completion:^{
-            [HUD showSuccess:@"成功"];
+        [WNHUD showLoading];
+        [WNHUD hideAfterDelay:5 completion:^{
+            [WNHUD showSuccess:@"成功"];
 
         }];
     });

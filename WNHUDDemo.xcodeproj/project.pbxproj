@@ -14,12 +14,12 @@
 		2FF4BA13207B268400C51AE7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2FF4BA11207B268400C51AE7 /* LaunchScreen.storyboard */; };
 		2FF4BA16207B268400C51AE7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FF4BA15207B268400C51AE7 /* main.m */; };
 		2FF4BA1E207B269B00C51AE7 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FF4BA1D207B269B00C51AE7 /* MBProgressHUD.m */; };
-		2FF4BA22207B26CC00C51AE7 /* HUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FF4BA21207B26CC00C51AE7 /* HUD.m */; };
-		2FF4BA2E207B47B300C51AE7 /* HUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2FF4BA2D207B47B300C51AE7 /* HUD.bundle */; };
+		2FF4BA22207B26CC00C51AE7 /* WNHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FF4BA21207B26CC00C51AE7 /* WNHUD.m */; };
+		2FF4BA2E207B47B300C51AE7 /* WNHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2FF4BA2D207B47B300C51AE7 /* WNHUD.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2FF4BA03207B268400C51AE7 /* HUDDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HUDDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2FF4BA03207B268400C51AE7 /* WNHUDDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WNHUDDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FF4BA06207B268400C51AE7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		2FF4BA07207B268400C51AE7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		2FF4BA09207B268400C51AE7 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
@@ -31,9 +31,9 @@
 		2FF4BA15207B268400C51AE7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2FF4BA1C207B269B00C51AE7 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		2FF4BA1D207B269B00C51AE7 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
-		2FF4BA20207B26CC00C51AE7 /* HUD.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HUD.h; sourceTree = "<group>"; };
-		2FF4BA21207B26CC00C51AE7 /* HUD.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HUD.m; sourceTree = "<group>"; };
-		2FF4BA2D207B47B300C51AE7 /* HUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = HUD.bundle; sourceTree = "<group>"; };
+		2FF4BA20207B26CC00C51AE7 /* WNHUD.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WNHUD.h; sourceTree = "<group>"; };
+		2FF4BA21207B26CC00C51AE7 /* WNHUD.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WNHUD.m; sourceTree = "<group>"; };
+		2FF4BA2D207B47B300C51AE7 /* WNHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = WNHUD.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,20 +47,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2FB4179A207C661C0074CD5C /* HUD */ = {
+		2FB4179A207C661C0074CD5C /* WNHUD */ = {
 			isa = PBXGroup;
 			children = (
-				2FF4BA2D207B47B300C51AE7 /* HUD.bundle */,
-				2FF4BA20207B26CC00C51AE7 /* HUD.h */,
-				2FF4BA21207B26CC00C51AE7 /* HUD.m */,
+				2FF4BA2D207B47B300C51AE7 /* WNHUD.bundle */,
+				2FF4BA20207B26CC00C51AE7 /* WNHUD.h */,
+				2FF4BA21207B26CC00C51AE7 /* WNHUD.m */,
 			);
-			path = HUD;
+			path = WNHUD;
 			sourceTree = "<group>";
 		};
 		2FF4B9FA207B268400C51AE7 = {
 			isa = PBXGroup;
 			children = (
-				2FF4BA05207B268400C51AE7 /* HUDDemo */,
+				2FF4BA05207B268400C51AE7 /* WNHUDDemo */,
 				2FF4BA04207B268400C51AE7 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -68,15 +68,15 @@
 		2FF4BA04207B268400C51AE7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2FF4BA03207B268400C51AE7 /* HUDDemo.app */,
+				2FF4BA03207B268400C51AE7 /* WNHUDDemo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		2FF4BA05207B268400C51AE7 /* HUDDemo */ = {
+		2FF4BA05207B268400C51AE7 /* WNHUDDemo */ = {
 			isa = PBXGroup;
 			children = (
-				2FB4179A207C661C0074CD5C /* HUD */,
+				2FB4179A207C661C0074CD5C /* WNHUD */,
 				2FF4BA1F207B26A000C51AE7 /* MBProgressHUD */,
 				2FF4BA06207B268400C51AE7 /* AppDelegate.h */,
 				2FF4BA07207B268400C51AE7 /* AppDelegate.m */,
@@ -88,7 +88,7 @@
 				2FF4BA14207B268400C51AE7 /* Info.plist */,
 				2FF4BA15207B268400C51AE7 /* main.m */,
 			);
-			path = HUDDemo;
+			path = WNHUDDemo;
 			sourceTree = "<group>";
 		};
 		2FF4BA1F207B26A000C51AE7 /* MBProgressHUD */ = {
@@ -103,9 +103,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		2FF4BA02207B268400C51AE7 /* HUDDemo */ = {
+		2FF4BA02207B268400C51AE7 /* WNHUDDemo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2FF4BA19207B268400C51AE7 /* Build configuration list for PBXNativeTarget "HUDDemo" */;
+			buildConfigurationList = 2FF4BA19207B268400C51AE7 /* Build configuration list for PBXNativeTarget "WNHUDDemo" */;
 			buildPhases = (
 				2FF4B9FF207B268400C51AE7 /* Sources */,
 				2FF4BA00207B268400C51AE7 /* Frameworks */,
@@ -115,9 +115,9 @@
 			);
 			dependencies = (
 			);
-			name = HUDDemo;
+			name = WNHUDDemo;
 			productName = HUD;
-			productReference = 2FF4BA03207B268400C51AE7 /* HUDDemo.app */;
+			productReference = 2FF4BA03207B268400C51AE7 /* WNHUDDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -135,7 +135,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 2FF4B9FE207B268400C51AE7 /* Build configuration list for PBXProject "HUDDemo" */;
+			buildConfigurationList = 2FF4B9FE207B268400C51AE7 /* Build configuration list for PBXProject "WNHUDDemo" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -148,7 +148,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				2FF4BA02207B268400C51AE7 /* HUDDemo */,
+				2FF4BA02207B268400C51AE7 /* WNHUDDemo */,
 			);
 		};
 /* End PBXProject section */
@@ -159,7 +159,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2FF4BA13207B268400C51AE7 /* LaunchScreen.storyboard in Resources */,
-				2FF4BA2E207B47B300C51AE7 /* HUD.bundle in Resources */,
+				2FF4BA2E207B47B300C51AE7 /* WNHUD.bundle in Resources */,
 				2FF4BA10207B268400C51AE7 /* Assets.xcassets in Resources */,
 				2FF4BA0E207B268400C51AE7 /* Main.storyboard in Resources */,
 			);
@@ -172,7 +172,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2FF4BA22207B26CC00C51AE7 /* HUD.m in Sources */,
+				2FF4BA22207B26CC00C51AE7 /* WNHUD.m in Sources */,
 				2FF4BA0B207B268400C51AE7 /* ViewController.m in Sources */,
 				2FF4BA16207B268400C51AE7 /* main.m in Sources */,
 				2FF4BA08207B268400C51AE7 /* AppDelegate.m in Sources */,
@@ -313,7 +313,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = "$(SRCROOT)/HUDDemo/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/WNHUDDemo/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.szm.HUD;
@@ -330,7 +330,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = "$(SRCROOT)/HUDDemo/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/WNHUDDemo/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.szm.HUD;
@@ -343,7 +343,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2FF4B9FE207B268400C51AE7 /* Build configuration list for PBXProject "HUDDemo" */ = {
+		2FF4B9FE207B268400C51AE7 /* Build configuration list for PBXProject "WNHUDDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2FF4BA17207B268400C51AE7 /* Debug */,
@@ -352,7 +352,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2FF4BA19207B268400C51AE7 /* Build configuration list for PBXNativeTarget "HUDDemo" */ = {
+		2FF4BA19207B268400C51AE7 /* Build configuration list for PBXNativeTarget "WNHUDDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2FF4BA1A207B268400C51AE7 /* Debug */,
