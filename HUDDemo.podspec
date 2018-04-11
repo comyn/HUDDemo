@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
 
   s.name         = "HUDDemo"
   s.version      = "0.0.1"
-  s.summary      = "hud 加载器"
+  s.summary      = "hud加载器"
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
@@ -25,7 +25,7 @@ Pod::Spec.new do |s|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   s.description  = <<-DESC
-                  hud 加载器，添加到window或指定view
+                  hud加载器，添加到window或指定视图
                    DESC
 
   s.homepage     = "https://github.com/comyn/HUDDemo"
@@ -40,7 +40,7 @@ Pod::Spec.new do |s|
   #
 
   s.license      = { :type => "MIT", :file => "LICENSE" }
-  # s.license      = { :type => "MIT", :file => "LICENSE" }
+  # s.license      = { :type => "MIT", :file => "FILE_LICENSE" }
 
 
   # ――― Author Metadata  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -91,10 +91,10 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "HUDDemo/HUD/*.{h,m}"
+  s.source_files  = "HUDDemo/HUDDemo/*.{h,m}"
   s.exclude_files = "HUDDemo/Exclude"
 
-  s.public_header_files = "HUDDemo/HUD/*.h"
+  s.public_header_files = "HUDDemo/**/*.h"
 
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -117,8 +117,8 @@ Pod::Spec.new do |s|
   #  the lib prefix of their name.
   #
 
-  # s.framework  = "Foundation"
-  s.frameworks = "Foundation", "UIKit"
+  # s.framework  = "SomeFramework"
+  # s.frameworks = "SomeFramework", "AnotherFramework"
 
   # s.library   = "iconv"
   # s.libraries = "iconv", "xml2"
