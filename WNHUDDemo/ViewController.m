@@ -17,14 +17,39 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [WNHUD showLoading];
-        [WNHUD hideAfterDelay:5 completion:^{
-            [WNHUD showSuccess:@"成功"];
-        }];
-    });
+    [self adddView];
 }
 
+- (void)adddView {
+    [WNHUD showLoading:@"玩命加载" inView:self.view];
+    dispatch_async(dispatch_get_global_queue(QOS_CLASS_USER_INITIATED, 0), ^{
+        sleep(2);
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [WNHUD hideAfterDelay:3 completion:^{
+                [WNHUD showSuccess:@"success" inView:self.view];
+            }];
+        });
+    });
+}
+- (void)addKeyWindow {
+    [WNHUD showLoading:@"22"];
+    //    NSLog(@"%@1",[NSThread currentThread]);
+    
+    dispatch_async(dispatch_get_global_queue(QOS_CLASS_USER_INITIATED, 0), ^{
+        //        sleep(1);
+        //        NSLog(@"%@2",[NSThread currentThread]);
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            //            [WNHUD hide];
+            [WNHUD hideAfterDelay:3 completion:^{
+                //                NSLog(@"%@3",[NSThread currentThread]);
+                
+                [WNHUD showSuccess:@"成功"];
+                [WNHUD hide];
+            }];
+        });
+    });
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

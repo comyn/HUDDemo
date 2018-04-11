@@ -121,7 +121,6 @@ typedef enum : NSUInteger {
     // 如果不为空，说明有创建，先清空再创建
     if (self.hud) {
         [self hideAfterDelay:0 completion:nil];
-        self.hud = nil;
     }
     self.hud = [MBProgressHUD showHUDAddedTo:view?view:[UIApplication sharedApplication].keyWindow animated:YES];
     [self.hud setMinSize:CGSizeMake(100, 100)];//设置最小大小，防止变形
@@ -152,8 +151,9 @@ typedef enum : NSUInteger {
         default:
             break;
     }
-    [self.hud hideAnimated:YES];
+//    [self.hud hideAnimated:YES];
 }
+
 #pragma mark - 自定义视图
 - (UIView *)customeView:(HUDMode)mode {
     NSString *bundlePath = [[NSBundle bundleForClass:[self class]] pathForResource:@"HUD" ofType:@"bundle"];
@@ -191,7 +191,12 @@ typedef enum : NSUInteger {
     }else{
         [self.hud hideAnimated:YES afterDelay:delay];
     }
-    completion ? completion = self.hud.completionBlock : nil;
+    
+    if (completion) {
+        self.hud.completionBlock = completion;
+    }
+    self.hud = nil;
+
 }
 
 @end
