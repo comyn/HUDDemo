@@ -23,9 +23,9 @@
 - (void)adddView {
     [WNHUD showLoading:@"玩命加载" inView:self.view];
     dispatch_async(dispatch_get_global_queue(QOS_CLASS_USER_INITIATED, 0), ^{
-        sleep(2);
+//        sleep(2);
         dispatch_async(dispatch_get_main_queue(), ^{
-            [WNHUD hideAfterDelay:3 completion:^{
+            [WNHUD hideAfterDelay:10 completion:^{
                 [WNHUD showSuccess:@"success" inView:self.view];
             }];
         });

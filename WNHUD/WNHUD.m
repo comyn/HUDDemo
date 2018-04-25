@@ -18,12 +18,12 @@ typedef enum : NSUInteger {
 } HUDMode;
 
 @interface WNHUD ()
-@property (nonatomic) NSInteger HUDAnimation;
-@property (nonatomic) NSInteger HUDBackgroundStyle;
+//@property (nonatomic) NSInteger HUDAnimation;
+//@property (nonatomic) NSInteger HUDBackgroundStyle;
 @property (nonatomic, copy) NSString *title;
 @property (nonatomic, copy) NSString *subTitle;
-@property (nonatomic, strong) UIView *customeView;
-@property (nonatomic, assign) CGPoint offset;
+//@property (nonatomic, strong) UIView *customeView;
+//@property (nonatomic, assign) CGPoint offset;
 @property (nonatomic, strong) MBProgressHUD *hud;
 @end
 
@@ -48,9 +48,9 @@ typedef enum : NSUInteger {
 - (void)commonInit {
     self.title = nil;
     self.subTitle = nil;
-    self.customeView = nil;
-    self.offset = CGPointMake(10, 10);
-    self.HUDAnimation = MBProgressHUDAnimationFade;
+//    self.customeView = nil;
+//    self.offset = CGPointMake(10, 10);
+//    self.HUDAnimation = MBProgressHUDAnimationFade;
 }
 
 #pragma mark -- 添加到window上
@@ -152,11 +152,12 @@ typedef enum : NSUInteger {
             break;
     }
 //    [self.hud hideAnimated:YES];
+
 }
 
 #pragma mark - 自定义视图
 - (UIView *)customeView:(HUDMode)mode {
-    NSString *bundlePath = [[NSBundle bundleForClass:[self class]] pathForResource:@"HUD" ofType:@"bundle"];
+    NSString *bundlePath = [[NSBundle bundleForClass:[self class]] pathForResource:@"WNHUD" ofType:@"bundle"];
     NSString *imageName = @"";
     switch (mode) {
         case HUDModeInfoMsg:
@@ -186,6 +187,8 @@ typedef enum : NSUInteger {
 }
 
 - (void)hideAfterDelay:(NSTimeInterval)delay completion:(void(^)(void))completion {
+//    [self.timer invalidate];
+
     if (delay==-1) {
         [self.hud hideAnimated:YES];
     }else{
